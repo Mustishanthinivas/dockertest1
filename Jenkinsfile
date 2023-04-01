@@ -1,19 +1,19 @@
 pipeline {
     environment {
-        registry = 'Mustishanthinivas/devopsb22dev'
+        registry = 'Mustishanthinivas/devopsb22prod'
         registryCredential = 'dockerhub_id'
         devcontext = 'dev-swarm'
         prodcontext = 'prod-swarm'
-        devnode = '172.31.90.154'
         prodnode = '172.31.17.164'
+        devnode = '172.31.90.154'
         dockerImage = ''
-    }
+    }                   
     agent any
     stages {
         stage('Building Prod Docker Branch') {
             when {
                 expression {
-                    return env.BRANCH_NAME != 'DevOpsB22-Prod'
+                    return env.BRANCH_NAME != 'Devopsb22-Prod'
                 }
             }
             steps {
