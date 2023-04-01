@@ -2,8 +2,8 @@ pipeline {
     environment {
         registry = 'mustishanthinivas/devopsb22'
         registryCredential = 'dockerhub_id'
-        dockerSwarmManager = '172.31.93.103:2375'
-        dockerhost = '172.31.93.103'
+        dockerSwarmManager = '172.31.90.154:2375'
+        dockerhost = '172.31.90.154'
         dockerImage = ''
     }
     agent any
